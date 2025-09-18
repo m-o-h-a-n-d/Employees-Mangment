@@ -6,13 +6,9 @@ var address = document.getElementById("address");
 var department = document.getElementById("department");
 var job = document.getElementById("job_title");
 var salary = document.getElementById("salary");
-
-var form = document.getElementsByTagName("form")[0];
-var tableBody = document.getElementById("employeeTableBody"); // tbody للعرض
-
+var form = document.getElementById('employeeForm');
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-
   const employee = {
     name: fullName.value,
     email: email.value,
@@ -25,6 +21,7 @@ form.addEventListener("submit", function (e) {
 
   let employees = JSON.parse(localStorage.getItem("employees")) || [];
 
+
   let checkEmail = employees.some((emp) => emp.email === employee.email);
   let checkPhone = employees.some((emp) => emp.phone === employee.phone);
 
@@ -32,6 +29,7 @@ form.addEventListener("submit", function (e) {
   oldErrors.forEach((err) => err.remove());
 
   var hasError = false;
+
   if (checkEmail) {
     var error = document.createElement("span");
     error.classList.add("error-msg");
@@ -53,10 +51,10 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
+
   employees.unshift(employee);
   localStorage.setItem("employees", JSON.stringify(employees));
   alert("✅ The Employee is Saved!");
 
-  
   this.reset();
 });
