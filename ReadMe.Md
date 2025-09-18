@@ -39,4 +39,23 @@ This project represents one of my first steps into the JS world.
 
 ## 📂 Project Structure  
 
+---
+
+## 🔮 Future Improvements  
+
+- Replace **LocalStorage** with a real **database** (PostgreSQL on Neon).  
+- Add a backend API (Laravel or Node.js).  
+- Role-based authentication (Admin / User).  
+- Integrate with **React.js** for a modern frontend.  
+
+---
+
+## 👨‍💻 Author  
+
+**Mohaned Ahmed Shehata**  
+- Full Stack Developer (Laravel + JS)  
+- 🌍 From Egypt  
+- 📧 [mohanedahmed015529.222.00@gmail.com](mailto:mohanedahmed015529.222.00@gmail.com)  
+
+
 
