@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication Form</title>
+    <link rel="stylesheet" href="Auth/css/style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Sign Up</h2>
+      <form>
+        <span id="success" class="success"></span>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            required
+          />
+          <span id="errorPass" style="color: red"></span>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="extra-links">
+          <p>
+            <a href="login.html">Already Have An Account ? SignUp </a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <script>
+      if (localStorage.getItem("loggedIn") === "true") {
+        window.location.replace("/Project/table.html");
+      }
+    </script>
+    <script src="Auth/js/script.js"></script>
+  </body>
+</html>
